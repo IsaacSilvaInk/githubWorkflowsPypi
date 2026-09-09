@@ -1,11 +1,10 @@
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
 name = "githubWorkflowsPypi"
-version = "0.1.0"
-authors = [
-    { name="Isaac Silva", email="isaacsilvink@gmail.com" },
-]
+version = "0.1.2"  # Aumentei para 0.1.2 para evitar conflito de versão no TestPyPI
 description = "Um exemplo de publicação automatizada com GitHub Actions"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -14,5 +13,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+authors = [
+    { name="Isaac Silva", email="isaacsilvink@gmail.com" },
+]
+
 [tool.setuptools.packages.find]
-where = ["minha_ferramenta"]
+where = ["."]
