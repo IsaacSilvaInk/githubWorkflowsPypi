@@ -1,21 +1,29 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61", "setuptools-scm[toml]>=8"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools_scm]
+version_scheme = "no-guess-dev"
+local_scheme = "no-local-version"
+
 [project]
-name = "githubWorkflowsPypi"
-version = "0.1.2"  # Aumentei para 0.1.2 para evitar conflito de versão no TestPyPI
-description = "Um exemplo de publicação automatizada com GitHub Actions"
+name = "DanoTeste"
+dynamic = ["version"]
+description = "Um pacote de rolagem de dano para jogos de RPG"
 readme = "README.md"
-requires-python = ">=3.8"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
 authors = [
-    { name="Isaac Silva", email="isaacsilvink@gmail.com" },
+    {name = "Isaac Silva"}
 ]
 
-[tool.setuptools.packages.find]
-where = ["."]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/IsaacSilvaInk/githubWorkflowsPypi"
